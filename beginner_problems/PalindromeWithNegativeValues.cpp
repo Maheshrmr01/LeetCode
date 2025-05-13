@@ -4,12 +4,13 @@ public:
         if (x<0){
             return false;
         }
-        int r = reverse(x);
+        //used long long to handle overflow cases
+        long long r = reverse(x);
         return (x==r)? true:false;
     }
-    int reverse(int x )
+    long long reverse(int x )
     {
-        int r = 0;
+        long long r = 0;
         while(x!=0)
         {
             r= r*10 + x%10;
